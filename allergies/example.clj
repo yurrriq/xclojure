@@ -1,7 +1,7 @@
 (ns allergies)
 
 (def ^:private allergens
-  ["eggs" "peanuts" "shellfish" "strawberries" "tomatoes" "chocolate" "pollen" "cats"])
+  [:eggs :peanuts :shellfish :strawberries :tomatoes :chocolate :pollen :cats])
 
 (defn- flagged?
   [flags index]
