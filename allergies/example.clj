@@ -5,9 +5,9 @@
 
 (defn- flagged?
   [flags index]
-  (> (bit-and
-       (bit-shift-right flags index) 1)
-     0))
+  (-> (bit-shift-right flags index)
+      (bit-and 1)
+      (pos?)))
 
 (defn allergies
   "Given an 8-bit bitmap of flags, return the list of matching allergens."
