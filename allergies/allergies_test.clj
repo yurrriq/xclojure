@@ -31,15 +31,15 @@
          (allergies/list 255))))
 
 (deftest no-allergies-means-not-allergic
-  (is (not (allergies/allergic_to? 0 :peanuts)))
-  (is (not (allergies/allergic_to? 0 :cats)))
-  (is (not (allergies/allergic_to? 0 :strawberries))))
+  (is (not (allergies/allergic-to? 0 :peanuts)))
+  (is (not (allergies/allergic-to? 0 :cats)))
+  (is (not (allergies/allergic-to? 0 :strawberries))))
 
 (deftest is-allergic-to-eggs
-  (is (allergies/allergic_to? 1 :eggs)))
+  (is (allergies/allergic-to? 1 :eggs)))
 
 (deftest allergic-to-eggs-in-addition-to-other-stuff
-  (is (allergies/allergic_to? 5 :eggs)))
+  (is (allergies/allergic-to? 5 :eggs)))
 
 (deftest ignore-non-allergen-score-parts
   (is (= [:eggs :shellfish :strawberries :tomatoes :chocolate :pollen :cats]

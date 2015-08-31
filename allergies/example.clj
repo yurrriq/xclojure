@@ -18,7 +18,7 @@
         (flagged? flags index))
       (map-indexed vector allergens))))
 
-(defn allergic_to?
+(defn allergic-to?
   "given an 8-bit bitmap of flags and an allergen, return a boolean indicating whether or not the patient is allergic to the given allergen"
   [flags allergen]
   (some #(= allergen %1) (list flags)))
