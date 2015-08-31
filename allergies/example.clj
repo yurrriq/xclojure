@@ -22,5 +22,4 @@
   "Given an 8-bit bitmap of flags and an allergen, return a boolean
   indicating whether or not the patient is allergic to the given allergen."
   [flags allergen]
-  (some #(= allergen %1) (allergies flags)))
-
+  (some #{allergen} (allergies flags)))
