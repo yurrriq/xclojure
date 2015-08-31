@@ -9,7 +9,7 @@
        (bit-shift-right flags index) 1)
      0))
 
-(defn list
+(defn allergies
   "given an 8-bit bitmap of flags, return the list of matching allergens"
   [flags]
   (mapv last
@@ -21,5 +21,5 @@
 (defn allergic-to?
   "given an 8-bit bitmap of flags and an allergen, return a boolean indicating whether or not the patient is allergic to the given allergen"
   [flags allergen]
-  (some #(= allergen %1) (list flags)))
+  (some #(= allergen %1) (allergies flags)))
 
