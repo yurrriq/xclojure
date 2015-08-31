@@ -10,7 +10,7 @@
      0))
 
 (defn allergies
-  "given an 8-bit bitmap of flags, return the list of matching allergens"
+  "Given an 8-bit bitmap of flags, return the list of matching allergens."
   [flags]
   (mapv last
     (filter
@@ -19,7 +19,8 @@
       (map-indexed vector allergens))))
 
 (defn allergic-to?
-  "given an 8-bit bitmap of flags and an allergen, return a boolean indicating whether or not the patient is allergic to the given allergen"
+  "Given an 8-bit bitmap of flags and an allergen, return a boolean
+  indicating whether or not the patient is allergic to the given allergen."
   [flags allergen]
   (some #(= allergen %1) (allergies flags)))
 
